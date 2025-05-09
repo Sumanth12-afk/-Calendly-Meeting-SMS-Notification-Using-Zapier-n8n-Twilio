@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book My Time</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+    .calendly-inline-widget {
+      min-height: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    @media (max-width: 768px) {
+      .calendly-inline-widget {
+        min-height: 600px;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="bg-white py-4 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center">
+        <div class="flex items-center">
+          <i class="far fa-calendar-alt text-blue-500 text-2xl mr-2"></i>
+          <span class="text-xl font-semibold text-gray-800">Book My Time</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Schedule a Meeting</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Book a time that works for you. Select your preferred date and time below, 
+          and we'll send you a confirmation with all the details.
+        </p>
+      </div>
+
+      <!-- Calendly Embed Section -->
+      <div class="bg-white p-6 md:p-8 rounded-xl shadow-sm">
+        <div class="text-center mb-6">
+          <h2 class="text-xl font-semibold text-gray-800 mb-2">Available Time Slots</h2>
+          <p class="text-gray-500">Choose a time that fits your schedule</p>
+        </div>
+
+        <!-- 🔽🔽🔽 Calendly Embed Code Section 🔽🔽🔽 -->
+        <!-- This is the Calendly embed code. Replace 'sumanthnallandhigal' with your Calendly username. -->
+        <div 
+          class="calendly-inline-widget" 
+          data-url="https://calendly.com/sumanthnallandhigal/new-meeting" 
+          style="min-width:320px;height:700px;">
+        </div>
+        <!-- 🔼🔼🔼 End Calendly Embed Code 🔼🔼🔼 -->
+
+        <div class="mt-6 text-center text-sm text-gray-500">
+          <p>Need help scheduling? <a href="mailto:help@bookmytime.com" class="text-blue-500 hover:text-blue-600">Contact us</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center mb-4 md:mb-0">
+          <i class="far fa-calendar-alt text-blue-500 text-xl mr-2"></i>
+          <span class="text-gray-700 font-medium">Book My Time</span>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="text-gray-500 hover:text-gray-700"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="mt-4 text-center md:text-left text-sm text-gray-500">
+        <p>&copy; 2023 Book My Time. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calendly Script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
